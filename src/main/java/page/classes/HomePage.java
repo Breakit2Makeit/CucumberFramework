@@ -13,7 +13,7 @@ public class HomePage {
 	}
 
 	public static WebElement enterName(WebDriver driver) {
-		element = driver.findElement(By.id("field1"));
+		element = driver.findElement(By.xpath("//input[@id='field1']"));
 		return element;
 	}
 	

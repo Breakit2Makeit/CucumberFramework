@@ -2,51 +2,25 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45765" started-at="2018-06-14T19:34:52Z" finished-at="2018-06-14T19:35:38Z">
+  <suite name="Default suite" duration-ms="43297" started-at="2018-06-18T18:30:50Z" finished-at="2018-06-18T18:31:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45765" started-at="2018-06-14T19:34:52Z" finished-at="2018-06-14T19:35:38Z">
+    <test name="Default test" duration-ms="43297" started-at="2018-06-18T18:30:50Z" finished-at="2018-06-18T18:31:33Z">
       <class name="com.breakit2makeit.cucumberFrameWork.TestBase">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.breakit2makeit.cucumberFrameWork.TestBase@4ddced80]" name="beforeMethod" is-config="true" duration-ms="9392" started-at="2018-06-14T15:34:52Z" finished-at="2018-06-14T15:35:01Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.breakit2makeit.cucumberFrameWork.TestBase@4ddced80]" name="beforeMethod" is-config="true" duration-ms="8439" started-at="2018-06-18T14:30:50Z" finished-at="2018-06-18T14:30:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="testBase()[pri:0, instance:com.breakit2makeit.cucumberFrameWork.TestBase@4ddced80]" name="testBase" duration-ms="36354" started-at="2018-06-14T15:35:01Z" finished-at="2018-06-14T15:35:38Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="testBase()[pri:0, instance:com.breakit2makeit.cucumberFrameWork.TestBase@4ddced80]" name="testBase" duration-ms="34547" started-at="2018-06-18T14:30:59Z" finished-at="2018-06-18T14:31:33Z">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Unable to locate element: //div[@name='Message']//textarea
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
-System info: host: 'JOP55-DT', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 15608, moz:profile: C:\Users\JOP55\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 7d473eb8-0019-4b12-bf29-6f918314e51b
-*** Element info: {Using=xpath, value=//div[@name='Message']//textarea}]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: field1'] (tried for 3 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@name='Message']//textarea
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
-System info: host: 'JOP55-DT', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 15608, moz:profile: C:\Users\JOP55\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 7d473eb8-0019-4b12-bf29-6f918314e51b
-*** Element info: {Using=xpath, value=//div[@name='Message']//textarea}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
-	at com.breakit2makeit.cucumberFrameWork.TestBase.testBase(TestBase.java:40)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: field1'] (tried for 3 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+	at com.breakit2makeit.cucumberFrameWork.TestBase.testBase(TestBase.java:54)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -72,13 +46,26 @@ Session ID: 7d473eb8-0019-4b12-bf29-6f918314e51b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: field1']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'JOP55-DT', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	... 26 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBase -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.breakit2makeit.cucumberFrameWork.TestBase@4ddced80]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-14T15:35:38Z" finished-at="2018-06-14T15:35:38Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.breakit2makeit.cucumberFrameWork.TestBase@4ddced80]" name="afterMethod" is-config="true" duration-ms="293" started-at="2018-06-18T14:31:33Z" finished-at="2018-06-18T14:31:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
