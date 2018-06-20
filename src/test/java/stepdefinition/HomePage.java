@@ -1,21 +1,26 @@
-package com.breakit2makeit.cucumberFrameWork;
+package stepdefinition;
 
 import java.util.concurrent.TimeUnit;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import com.breakit2makeit.cucumberFrameWork.GenericMethods;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+import com.breakit2makeit.cucumberFrameWork.GenericMethods;
+import com.breakit2makeit.cucumberFrameWork.TestBase;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import cucumber.api.java.en.Then;
 import page.classes.HomePageFactory;
 
 /*
@@ -25,63 +30,73 @@ import page.classes.HomePageFactory;
  * All other files will extend to this
 */
 
-public class TestBase {
+public class HomePage extends TestBase {
 	protected WebDriver driver;
 	protected String baseURL;
-	protected static final Logger log = LogManager.getLogger(TestBase.class.getName());
+	protected static final Logger log = LogManager.getLogger(HomePage.class.getName());
 	protected JavascriptExecutor js;
 	protected GenericMethods gm;
 	HomePageFactory homePage;
 
 	@BeforeMethod
 	public void beforeMethod() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\Apache\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		baseURL = "https://www.breakit2makeit.org/";
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		js = (JavascriptExecutor) driver;
 		gm = new GenericMethods(driver);
 		homePage = new HomePageFactory(driver);
 
 	}
 
-	@Test
-	public void testBase() throws Exception {
+	@Given("the user is on the home page")
+	public void the_user_is_on_the_home_page() {
 		driver.get(baseURL);
+		throw new PendingException();
+	}
 
-		// Scroll down
-
+	@Given("scroll down to the message box")
+	public void scroll_down_to_the_message_box() {
 		js.executeScript("window.scrollBy(0, 2700);");
-		// Explicit wait
-
-		WebDriverWait wait = new WebDriverWait(driver, 5);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@name='Message']")));
-//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("field1']")));
-
-		homePage.writeName("Johnson");
-		Thread.sleep(2000);
-		homePage.writeEmail("John@john.com");
-		Thread.sleep(2000);
-		homePage.writeSub("First subscription");
-		Thread.sleep(2000);
-
-//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@name='Message']")));
-
-		// Scroll Element into view
 		WebElement element = gm.getXpathElements("//textarea[@name='Message']", "textarea");
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
-		Thread.sleep(2000);
-		
+		// Explicit wait
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@name='Message']")));
+		throw new PendingException();
+	}
+
+	@When("user enter name")
+	public void user_enter_name() {
+		homePage.writeName("Johnson");
+		throw new PendingException();
+	}
+
+	@When("enter email id")
+	public void enter_email_id() {
+		homePage.writeEmail("John@john.com");
+		throw new PendingException();
+	}
+
+	@When("enter subject")
+	public void enter_subject() {
+		homePage.writeSub("First subscription");
+		throw new PendingException();
+	}
+
+	@When("enter message")
+	public void enter_message() {
 		homePage.writeMessage("Message Message Message Message Message Message Message ");
-		Thread.sleep(2000);
-//		homePage.clickSend();
+		throw new PendingException();
+	}
 
-//		gm.getXpathElements("//textarea[@name='Message']", "textarea").sendKeys("Message: kjlkhjlkjkjikj");
+	@When("click on send")
+	public void click_on_send() {
+		// homePage.clickSend();
+		throw new PendingException();
+	}
 
-		// driver.findElement(By.xpath("//textarea[@name='Message']")).sendKeys("Message:
-		// kjlkhjlkjkjikj");
-		Thread.sleep(20000);
+	@Then("User getsa a confirmaton message")
+	public void user_getsa_a_confirmaton_message() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new PendingException();
 	}
 
 	@AfterMethod
