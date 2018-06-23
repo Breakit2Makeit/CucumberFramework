@@ -1,3 +1,5 @@
-com\breakit2makeit\cucumberFrameWork\GenericMethods.class
 page\classes\HomePage.class
+com\breakit2makeit\cucumberFrameWork\GenericMethods.class
 page\classes\HomePageFactory.class
+com\breakit2makeit\cucumberFrameWork\App.class
+com\breakit2makeit\cucumberFrameWork\JavaScriptRepos.class

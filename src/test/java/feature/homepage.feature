@@ -32,14 +32,14 @@ Feature: Testin Home page applications
     Then User getsa a confirmaton message
 
   @tag2
-  Scenario: Title of your scenario outline
+  Scenario: Test invalid message submission on homepage
     Given the user is on the home page
     And scroll down to the message box
-    When user enter name
+    When user enter no name
     And enter no email id
-    And enter subject
-    And click on send
-    Then User getsa a warning message
+    And enter no subject
+    And click on invalid send
+    Then User gets a warning message
 
     #Examples: 
       | name  | value | status  |

@@ -35,8 +35,8 @@ public class TestBase {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\Apache\\geckodriver.exe");
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\dbmiadmin\\eclipse-workspace\\geckodriver-v0.19.1-win64\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
 		baseURL = "https://www.breakit2makeit.org/";
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

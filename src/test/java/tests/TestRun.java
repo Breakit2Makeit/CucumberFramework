@@ -8,10 +8,15 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+		monochrome = true,
 		features = "src/test/java/feature",
-		glue = {"src/test/java/stepdefinition"}
+		glue = {"stepdefinition"}
+//		tags = "",
+//		plugin = {"pretty", "html:target/cucumber-html-report"}
 		)
 
 public class TestRun extends AbstractTestNGCucumberTests {
+	
+//	 
 
 }

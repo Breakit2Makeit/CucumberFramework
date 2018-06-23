@@ -1,3 +1,5 @@
-stepdefinition\TestBase.class
 com\breakit2makeit\cucumberFrameWork\TestBase.class
+com\breakit2makeit\cucumberFrameWork\WindowSize.class
+com\breakit2makeit\cucumberFrameWork\AppTest.class
+stepdefinition\HomePage.class
 tests\TestRun.class
